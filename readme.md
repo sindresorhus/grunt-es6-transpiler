@@ -5,41 +5,28 @@
 *Issues with the output should be reported on the es6-transpiler [issue tracker](https://github.com/termi/es6-transpiler/issues).*
 
 
-## Getting Started
+## Install
 
-If you haven't used [grunt][] before, be sure to check out the [Getting Started][] guide, as it explains how to create a [gruntfile][Getting Started] as well as install and use grunt plugins. Once you're familiar with that process, install this plugin with this command:
-
-```bash
+```sh
 $ npm install --save-dev grunt-es6-transpiler
 ```
 
-Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
+
+## Usage
 
 ```js
-grunt.loadNpmTasks('grunt-es6-transpiler');
-```
+require('load-grunt-tasks')(grunt); // npm install --save-dev load-grunt-tasks
 
-*Tip: the [load-grunt-tasks](https://github.com/sindresorhus/load-grunt-tasks) module makes it easier to load multiple grunt tasks.*
-
-
-[grunt]: http://gruntjs.com
-[Getting Started]: http://gruntjs.com/getting-started
-
-
-## Example
-
-```js
 grunt.initConfig({
-	es6transpiler: {                           // Task
-		dist: {                                // Target
-			files: {                           // Dictionary of files
-				'dist/app.js': 'src/app.js'    // Destination: Source
+	es6transpiler: {
+		dist: {
+			files: {
+				'dist/app.js': 'src/app.js'
 			}
 		}
 	}
 });
 
-grunt.loadNpmTasks('grunt-es6-transpiler');
 grunt.registerTask('default', ['es6transpiler']);
 ```
 
@@ -51,4 +38,4 @@ Use the es6-transpiler [options](https://github.com/termi/es6-transpiler#options
 
 ## License
 
-[MIT](http://opensource.org/licenses/MIT) © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](http://sindresorhus.com)

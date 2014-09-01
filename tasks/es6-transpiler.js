@@ -21,11 +21,13 @@ module.exports = function (grunt) {
 			try {
 				result = es6transpiler.run(options);
 			} catch (err) {
-				return next(err);
+				next(err);
+				return;
 			}
 
 			if (result.errors.length > 0) {
-				return next(result.errors.join('\n'));
+				next(result.errors.join('\n'));
+				return;
 			}
 
 			grunt.file.write(el.dest, result.src);
@@ -33,7 +35,8 @@ module.exports = function (grunt) {
 			next();
 		}, function (err) {
 			if (err) {
-				return grunt.warn(err);
+				grunt.warn(err);
+				return;
 			}
 
 			if (fileCount > 0) {
