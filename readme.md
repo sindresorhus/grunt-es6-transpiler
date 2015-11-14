@@ -1,5 +1,9 @@
 # grunt-es6-transpiler [![Build Status](https://travis-ci.org/sindresorhus/grunt-es6-transpiler.svg?branch=master)](https://travis-ci.org/sindresorhus/grunt-es6-transpiler)
 
+## Deprecated. Check out [grunt-babel](https://github.com/babel/grunt-babel) instead.
+
+---
+
 > Transpile ES6 to ES5 with [es6-transpiler](https://github.com/termi/es6-transpiler)
 
 *Issues with the output should be reported on the es6-transpiler [issue tracker](https://github.com/termi/es6-transpiler/issues).*
